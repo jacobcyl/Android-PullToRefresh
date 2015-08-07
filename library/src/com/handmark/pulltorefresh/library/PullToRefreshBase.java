@@ -46,7 +46,7 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 	// Constants
 	// ===========================================================
 
-	static final boolean DEBUG = true;
+	static boolean DEBUG = true;
 
 	static final boolean USE_HW_LAYERS = false;
 
@@ -1222,6 +1222,10 @@ public abstract class PullToRefreshBase<T extends View> extends LinearLayout imp
 				return new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,
 						LinearLayout.LayoutParams.WRAP_CONTENT);
 		}
+	}
+	
+	public static void setDebugMode(boolean enable){
+		DEBUG = enable;
 	}
 
 	private int getMaximumPullScroll() {
